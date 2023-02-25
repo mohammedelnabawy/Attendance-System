@@ -1,10 +1,10 @@
 window.addEventListener('load', function () {
+    const obj = JSON.parse(localStorage.getItem("data"))[0].user1;
     const txt = '{"FirstName":"Mohammed", "LastName":"El-Nabawy", "Address":"Cairo","Email":"mohammedelnabawy11@gmail.com", "age":30}';
-    const obj = JSON.parse(txt);
-    document.getElementById("fname").value = obj.FirstName;
-    document.getElementById("lname").value = obj.LastName;
+    document.getElementById("fname").value = obj.fname;
+    document.getElementById("lname").value = obj.lname;
     document.getElementById("Address").value = obj.Address;
-    document.getElementById("email").value = obj.Email;
+    document.getElementById("email").value = obj.email;
     document.getElementById("age").value=obj.age;
 });//end of load
 

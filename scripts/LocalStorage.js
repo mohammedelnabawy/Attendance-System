@@ -12,6 +12,4 @@ function addtolocal(){
     var before = JSON.parse(old);
     before.push(inputData);
     localStorage.setItem("data", JSON.stringify(before));
-
-    console.log(localStorage.getItem("data"));
 }
