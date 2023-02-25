@@ -33,7 +33,7 @@ ul > h1:hover {
 }
 
 .intro{
-    background-image:url(images/attend2.png);
+    background-image:url(../images/attend2.png);
     height:95vh;
     background-position:center;
     background-size:cover;
