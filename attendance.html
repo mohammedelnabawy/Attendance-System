@@ -8,15 +8,15 @@
     <title>Attendance</title>   
     <link href="styles/confirm_attendence.css" rel="stylesheet" />
     <script src="scripts/attend.js"></script>
-
+    <script src="scripts/Report.js"></script>
 
 </head>
 <body>
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="http://127.0.0.1:5500/Profile.html">Profile</a></li>
-        <li><a href="#">Attendance</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Profile.html">Profile</a></li>
+        <li><a href="attendance.html">Attendance</a></li>
+        <li><a href="#" onclick="logout()">logout</a></li>
     </ul>
     <div class="login-page">
         <div class="form">
@@ -26,13 +26,47 @@
           </form>
         </div>
     </div>
-    <div id="header">
-        <nav class="links" >
-            <a href="#" id="userBtn"></a>
-            <a href="#">monthely report</a>
-            <a href="#">daily report </a>
-        </nav>
+    <div class="reportsBtns">  
+        <button class="button" id="userDef"></button>
+        <button class="button"  onclick="MonthelyReport()">Monthely Report</button>
+        <button class="button"   onclick="MonthelyReport()">Daily Report</button>
     </div>
+
+    <div>
+        <div id="table-wrapper" class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <th>month</th>
+                    <th>attend days</th>
+                    <th>absent days </th>
+                    <th>late</th>
+                </tr>
+                </thead>
+                <tbody id="table_body">
+        
+                <tbody>
+            </table>
+        </div>
+        <div id="daily" class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <th>day</th>
+                    <th>Attendance Time </th>
+                    <th>late time  </th>
+                </tr>
+                </thead>
+                <tbody id="daily_table_body">
+        
+                <tbody>
+            </table>
+        </div>
+    </div>
+
+
     <script src="scripts/attendance.js"></script>
+    <script src="scripts/logout.js"></script>
+
 </body>
 </html>

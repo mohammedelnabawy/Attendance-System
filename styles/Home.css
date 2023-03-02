@@ -9,6 +9,9 @@ ul{
     min-height:5vh;
     justify-content:space-evenly;
     align-items:center;
+    background-color: #6f7486;
+    padding: 13px;
+   
 }
 li{
     list-style:none;
@@ -16,7 +19,9 @@ li{
 li>a{
     text-decoration:none;
     color:rgb(237 28 28);
-    font:bold 15px verdana;
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: bold
 }
 li>a:hover{
     color:rgb(164 156 156);

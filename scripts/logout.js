@@ -1,5 +1,6 @@
 
-function logout() {
-    localStorage.removeItem("currentUser");
-    window.location.replace("../index.html")
+function logout()
+{
+    localStorage.removeItem("logeduser");
+    window.location.replace("../main.html")
 }
