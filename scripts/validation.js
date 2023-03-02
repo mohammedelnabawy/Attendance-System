@@ -16,8 +16,14 @@ window.addEventListener('load',function(){
             vaildEmail=false;
             useremail.style.border = "1px solid red";
         } else {
-            vaildEmail=true;
-            useremail.style.border = "1px solid green";
+            if (DublicateEmailCheck()){
+                vaildEmail=false;
+                useremail.style.border = "1px solid red";
+            }else
+            {
+                vaildEmail=true;
+                useremail.style.border = "1px solid green";
+            }
         }
         toggleDisabled();
     });
@@ -49,14 +55,27 @@ window.addEventListener('load',function(){
             vaildLastname=false
             userlname.style.border = "1px solid red";
         } else {
+
             vaildLastname=true
             userlname.style.border = "1px solid green";
+
         }
         toggleDisabled();
     });
     
 })
 
+function DublicateEmailCheck(){
+    var old = localStorage.getItem("data");
+    var before = JSON.parse(old);
+    for (let i = 0; i < before.length; i++) {
+        if (useremail.value == before[i].email) {
+            message.innerText="Email is alredy Exist"
+            message.style.display = "block";
+            return true;
+        }
+    }
+}
 
 function toggleDisabled ()
 {
