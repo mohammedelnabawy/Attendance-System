@@ -21,9 +21,9 @@
             <p class="message">Already registered? <a href="#" style="font-family: 'Roboto', sans-serif;">Sign In</a></p>
         </form>
         <form class="login-form">
-            <input type="text" name="username" placeholder="username"/>
-            <input type="password" name="password" placeholder="password"/>
-            <button>login</button>
+            <input id="userName" type="text" name="username" placeholder="username"/>
+            <input id="pass" type="password" name="password" placeholder="password"/>
+            <button id="GOlogin" onclick="GOlogin();">login</button>
             <p class="message">Not registered? <a href="#"  style="font-family: 'Roboto', sans-serif;">Create an account</a></p>
         </form>
     </div>
@@ -31,5 +31,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/LocalStorage.js"></script>
+    <script src="scripts/login.js"></script>
 </body>
 </html>
