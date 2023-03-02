@@ -1,50 +1,74 @@
-useremail = document.getElementById('email');
-userage = document.getElementById('age');
-userfname = document.getElementById('fname');
-userlname = document.getElementById('lname');
+var useremail = document.getElementById('email');
+var userage = document.getElementById('age');
+var userfname = document.getElementById('fname');
+var userlname = document.getElementById('lname');
+var subminInput = document.getElementById('addlocal');
+var message = document.getElementById('messageError');
+var vaildEmail=false
+var vaildLastname=false
+var vaildFirstName=false
+var vaildage=false
 
 window.addEventListener('load',function(){
+
     useremail.addEventListener('blur',function(){
         if (!emailvalidation()) {
+            vaildEmail=false;
             useremail.style.border = "1px solid red";
-            // useremail.style.display = 'block';
         } else {
-
+            vaildEmail=true;
             useremail.style.border = "1px solid green";
         }
+        toggleDisabled();
     });
+
     userage.addEventListener('blur',function(){
         if (!agevalidation()) {
+            vaildage=false
             userage.style.border = "1px solid red";
-            // userage.style.display = 'block';
         } else {
-
+            vaildage=true
             userage.style.border = "1px solid green";
         }
+        toggleDisabled();
     });
 
-    userage.addEventListener('blur',function(){
+    userfname.addEventListener('blur',function(){
         if (!fnamevalidation()) {
+            vaildFirstName=false
             userfname.style.border = "1px solid red";
-            // userfname.style.display = 'block';
         } else {
-
+            vaildFirstName=true
             userfname.style.border = "1px solid green";
         }
+        toggleDisabled();
     });
 
-    userage.addEventListener('blur',function(){
+    userlname.addEventListener('blur',function(){
         if (!lnamevalidation()) {
+            vaildLastname=false
             userlname.style.border = "1px solid red";
-            // userlname.style.display = 'block';
         } else {
-
+            vaildLastname=true
             userlname.style.border = "1px solid green";
         }
+        toggleDisabled();
     });
+    
 })
 
 
+function toggleDisabled ()
+{
+    if( vaildEmail == true  && vaildLastname == true  && vaildFirstName == true && vaildage == true )
+    {
+        subminInput.disabled = false;
+    }
+    else 
+    {
+        message.style.display = "block";
+    }
+}
 function emailvalidation() {
     return useremail.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/);
 }
@@ -54,9 +78,9 @@ function agevalidation() {
 }
 
 function fnamevalidation() {
-    return age.value.match(/^[A-Za-z]+$/);
+    return userfname.value.match(/^[A-Za-z]+$/);
 }
 
 function lnamevalidation() {
-    return age.value.match(/^[A-Za-z]+$/);
+    return userlname.value.match(/^[A-Za-z]+$/);
 }

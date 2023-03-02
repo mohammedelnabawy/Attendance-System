@@ -12,12 +12,13 @@
     <div class="form">
         <p class="ti">Attendance System</p>
         <form class="register-form">
+            <p id="messageError">Please enter valid data </p>
             <input type="text" id="fname" name="f_name" placeholder="first name"/>
             <input type="text" id="lname" name="l_name" placeholder="last name"/>
             <input type="text" id="Address" name="address"placeholder="address"/>
             <input type="text" id="email" name="email" placeholder="email address"/>
             <input type="number" id="age" name="age" placeholder="age"/>
-            <button id="addlocal" onclick="addtolocal();">create</button>
+            <button id="addlocal" disabled="true" onclick="addtolocal();">create</button>
             <p class="message">Already registered? <a href="#" style="font-family: 'Roboto', sans-serif;">Sign In</a></p>
         </form>
         <form class="login-form">

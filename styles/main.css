@@ -99,3 +99,8 @@ color: #EF3B3A;
     font-family: "Roboto", sans-serif;
     color:#102579 ;
 }
+
+#messageError{
+    display: none !important;
+    color: red;
+}
