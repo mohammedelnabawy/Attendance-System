@@ -29,7 +29,7 @@ function MonthelyReport ()
     }
 
 
-
+    reportTable.replaceChildren();
     for (let i = 1; i <= 12; i++) {
         var attendDays = res[i].length
         var absentDays = (30 - res[i].length)
@@ -76,7 +76,7 @@ function dailyReports ()
             break;
         }
     }
-
+    reportTable.replaceChildren();
     if (new Date(usersData[usersData.length - 1]).getDay() == new Date().getDay()) {
         var tr = document.createElement("tr")
 
