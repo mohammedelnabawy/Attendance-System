@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirm Page</title>   
     <link href="styles/confirm_attendence.css" rel="stylesheet" />
-
+    <script src="scripts/attend.js"></script>
 
 </head>
 <body>
@@ -21,10 +21,17 @@
         <div class="form">
           <form class="login-form">
             <input id="username" type="text" placeholder="User Name" required/>
-            <button id= "SubmitAttend" type="submit" id="subbtn" onclick="SubmitAttend();">Confirm Attendance</button>
+            <button id="SubmitAttendid" type="submit" onclick="SubmitAttend()">Confirm Attendance</button>
           </form>
         </div>
     </div>
-    <script src="scripts/attend.js"></script>
+    <div id="header">
+      <nav class="links" >
+          <a href="#" id="userBtn"></a>
+          <a href="#">monthely report</a>
+          <a href="#">daily report </a>
+      </nav>
+  </div>
+  <script src="/scripts/attendence.js"></script>
 </body>
 </html>
