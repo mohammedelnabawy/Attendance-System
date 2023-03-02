@@ -104,3 +104,7 @@ color: #EF3B3A;
     display: none !important;
     color: red;
 }
+#addlocal:hover{
+    cursor: not-allowed	;
+}
+

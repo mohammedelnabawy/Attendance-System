@@ -70,7 +70,7 @@ function DublicateEmailCheck(){
     var before = JSON.parse(old);
     for (let i = 0; i < before.length; i++) {
         if (useremail.value == before[i].email) {
-            message.innerText="Email is alredy Exist"
+            message.innerHTML="Email is alredy Exist"
             message.style.display = "block";
             return true;
         }
@@ -81,6 +81,7 @@ function toggleDisabled ()
 {
     if( vaildEmail == true  && vaildLastname == true  && vaildFirstName == true && vaildage == true )
     {
+        subminInput.style.cursor="pointer";
         subminInput.disabled = false;
     }
     else 
