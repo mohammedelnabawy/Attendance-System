@@ -31,6 +31,7 @@ function addtolocal(){
     if(old === null) old = "[]";
 
     var inputData = {"userName":userName, "fname":f_name, "lname":l_name, "Address":add, "email":ema, "age":age, "password":pass};
+    Sendmail(inputData)
     var before = JSON.parse(old);
     before.push(inputData);
     localStorage.setItem("data", JSON.stringify(before));
