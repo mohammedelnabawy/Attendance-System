@@ -48,7 +48,7 @@ ul > h1:hover {
     padding: 45px;
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(15, 13, 13, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    margin: 230px auto ;
+    margin: 80px auto ;
   }
   .form input {
     font-family: "Roboto", sans-serif;
@@ -80,6 +80,52 @@ ul > h1:hover {
   body {
     background: #010b2e; 
     font-family: "Roboto", sans-serif;
-         
-  }
-  
+    box-sizing: border-box;
+
+  } 
+
+
+
+/* Appearance */
+.links {
+	background-color: #123;
+	border-bottom: 1px solid #0003;
+	box-shadow: 0 0 32px #0003;
+	font-size: 2em;
+	font-weight: 300;
+    text-align: center;
+    
+
+}
+.links > a {
+	color: #9ab;
+	padding: .75em;
+	text-align: center;
+	text-decoration: none;
+	transition: all .5s;
+}
+.links > a:hover {
+	background: #ffffff06;
+	color: #adf;
+}
+.links > .line {
+	background: #68a;
+	height: 1px;
+	pointer-events: none;
+}
+
+/* The Magic */
+#header {
+    margin-top: 20px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.links {
+	display: flex;
+	position: relative;
+    
+}
+
+
+
