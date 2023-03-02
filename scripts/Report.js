@@ -1,12 +1,11 @@
 function MonthelyReport ()
 {
-
     const user = JSON.parse(localStorage.getItem("logeduser"));
     const userAttendance = JSON.parse(localStorage.getItem("UserAttend"));
     let reportTable = document.getElementById("table_body")
+    document.getElementById("Monthely").style.display='block';
+    document.getElementById("daily").style.display='none';  
     var attend = {}
-  
-  
 
     const cuurentMonth = (new Date().getMonth() + 1 ); 
     var usersData 
@@ -15,6 +14,7 @@ function MonthelyReport ()
         if(userAttendance[i].userName == user.userName )
         {
             usersData = userAttendance[i].date
+            break;
         }
     }
 
@@ -54,7 +54,6 @@ function MonthelyReport ()
         tr.appendChild(td)
         reportTable.append(tr)
     }
-    console.log(attendDays)
 
 }
 
@@ -62,7 +61,44 @@ function MonthelyReport ()
 
 function dailyReports ()
 {
-    
+    const user = JSON.parse(localStorage.getItem("logeduser"));
+    const userAttendance = JSON.parse(localStorage.getItem("UserAttend"));
+    let reportTable = document.getElementById("daily_table_body")
+    document.getElementById("Monthely").style.display='none';
+    document.getElementById("daily").style.display='block';  
+    var attend = {}
+
+    var usersData 
+    for (let i = 0; i < userAttendance.length; i++) {
+        if(userAttendance[i].userName == user.userName )
+        {
+            usersData = userAttendance[i].date
+            break;
+        }
+    }
+
+    if (new Date(usersData[usersData.length - 1]).getDay() == new Date().getDay()) {
+        var tr = document.createElement("tr")
+
+        var td = document.createElement("td")
+        td.innerText = new Date().getDay() - 2;
+        tr.appendChild(td)
+
+        var td = document.createElement("td")
+        td.innerText = new Date(usersData[usersData.length - 1]).toTimeString()
+        tr.appendChild(td)
+
+        var td = document.createElement("td")
+        if (new Date(usersData[usersData.length - 1]).getHours() > 9  ) {
+            td.innerText = "late"
+        }else{
+            td.innerText = ""
+        }
+        tr.appendChild(td)
+
+        reportTable.append(tr)
+    }
+
 }
 
 
