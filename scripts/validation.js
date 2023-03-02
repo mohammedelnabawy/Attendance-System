@@ -82,6 +82,7 @@ function toggleDisabled ()
     if( vaildEmail == true  && vaildLastname == true  && vaildFirstName == true && vaildage == true )
     {
         subminInput.disabled = false;
+        message.style.display = "none";
     }
     else 
     {

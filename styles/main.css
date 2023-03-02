@@ -101,6 +101,6 @@ color: #EF3B3A;
 }
 
 #messageError{
-    display: none !important;
+    display: none;
     color: red;
 }
