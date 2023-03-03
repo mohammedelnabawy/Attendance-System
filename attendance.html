@@ -9,7 +9,8 @@
     <link href="styles/confirm_attendence.css" rel="stylesheet" />
     <script src="scripts/attend.js"></script>
     <script src="scripts/Report.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="scripts/adminReports.js"></script>
 </head>
 <body>
     <ul>
@@ -18,7 +19,7 @@
         <li><a href="attendance.html">Attendance</a></li>
         <li><a href="#" onclick="logout()">logout</a></li>
     </ul>
-    <div class="login-page">
+    <div class="login-page employees">
         <div class="form">
           <form class="login-form">
             <input id="username" type="text" placeholder="User Name" required/>
@@ -26,10 +27,19 @@
           </form>
         </div>
     </div>
-    <div class="reportsBtns">  
+    <div class="reportsBtns " id="employees">  
         <button class="button" id="userDef"></button>
         <button class="button"  onclick="MonthelyReport()">Monthely Report</button>
         <button class="button"   onclick="dailyReports()">Daily Report</button>
+    </div>
+
+    <div class="reportsBtns " id="admin">  
+        <button class="button" >admin</button>
+        <button class="button" onclick="FullReports()" >Full  Reports</button>
+        <button class="button" onclick="LateReports()"   >Late Reports</button>
+        <button class="button" onclick="ExecuseReports()"   >Execuse Reports</button>
+        <button class="button" onclick="EmployeeBrief()"   >Employee Brief</button>
+
     </div>
 
     <div>
@@ -64,9 +74,26 @@
         </div>
     </div>
 
-
+    <div>
+        <div id="admin_table" class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Attendance time </th>
+                    <th>absent</th>
+                    <th>late </th>
+                </tr>
+                </thead>
+                <tbody id="full_report" >
+        
+                <tbody>
+            </table>
+        </div>
+    </div>
     <script src="scripts/attendance.js"></script>
     <script src="scripts/logout.js"></script>
+    <script src="scripts/roles-handel.js"></script>
 
 </body>
 </html>

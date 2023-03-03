@@ -127,6 +127,10 @@ ul > h1:hover {
     display: none;  
 }
 
+#admin_table{
+    margin: 0px;
+}
+
 .fl-table {
     border-radius: 5px;
     font-size: 12px;
@@ -231,6 +235,14 @@ ul > h1:hover {
 }
 
 
-/* .table-wrapper{
+.employees{
     display: none;
-} */
+}
+
+.admin {
+    margin: 406px auto;
+}
+
+.admin_table{
+    display: none;
+}

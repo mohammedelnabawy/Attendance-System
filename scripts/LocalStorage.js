@@ -28,11 +28,11 @@ function addtolocal(){
     var age = document.getElementById("age").value;
 
     var old = localStorage.getItem("data");
-    if(old === null)
-    {
+
+    if(old === null){
         old = "[]";
-        var inputData = {"admin":true,"userName":userName, "fname":f_name, "lname":l_name, "Address":add, "email":ema, "age":age, "password":pass};
-    }else {
+        var inputData = {"admin":true, "userName":"admin", "fname":f_name, "lname":l_name, "Address":add, "email":ema, "age":age, "password":"123456789"};
+    }else{
         var inputData = {"userName":userName, "fname":f_name, "lname":l_name, "Address":add, "email":ema, "age":age, "password":pass};
     }
 
