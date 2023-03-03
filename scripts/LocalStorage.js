@@ -28,9 +28,13 @@ function addtolocal(){
     var age = document.getElementById("age").value;
 
     var old = localStorage.getItem("data");
-    if(old === null) old = "[]";
+    if(old === null){
+        old = "[]";
+        var inputData = {"admin":true, "userName":"admin", "fname":f_name, "lname":l_name, "Address":add, "email":ema, "age":age, "password":"123456789"};
+    }else{
+        var inputData = {"userName":userName, "fname":f_name, "lname":l_name, "Address":add, "email":ema, "age":age, "password":pass};
+    }
 
-    var inputData = {"userName":userName, "fname":f_name, "lname":l_name, "Address":add, "email":ema, "age":age, "password":pass};
     Sendmail(inputData)
     var before = JSON.parse(old);
     before.push(inputData);

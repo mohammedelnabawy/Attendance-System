@@ -67,6 +67,9 @@ window.addEventListener('load',function(){
 
 function DublicateEmailCheck(){
     var old = localStorage.getItem("data");
+    if(old == null){
+        return
+    }
     var before = JSON.parse(old);
     for (let i = 0; i < before.length; i++) {
         if (useremail.value == before[i].email) {
